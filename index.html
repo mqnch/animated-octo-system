@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script> 
+  <link rel="icon" type="image/x-icon" href="L.ico">
+  <title>hackathon website</title>
+  <!-- Background music -->
+  <audio id="backgroundMusic" src="Not Like Us.mp3" autoplay loop></audio>
+</head>
+
+<body>
+  <div class="loading-overlay">
+    <div class="loading-text">loading</div>
+    </div>
+      <div class="header">
+      <!-- Instagram icon link -->
+      <a href="https://www.instagram.com/speaknoevilco/" target="_blank">
+          <img class="instagram-icon" src="instagram.png" alt="Instagram Icon">
+      </a>
+
+      <!-- Tiktok icon link -->
+      <a href="https://www.tiktok.com/@speaknoevil.co/" target="_blank">
+          <img class="tiktok-icon" src="tiktok.png" alt="Tiktok Icon">
+      </a>
+
+      <!-- Toggle button for music -->
+      <div class="toggle-button" onclick="toggleMusic()">
+      <img id="toggleButton" class="toggle-image" src="volume.png" alt="Toggle Music">
+
+    </div>
+    
+    <!-- Title -->
+    <h1>hackathon website</h1>
+
+    <!-- Three boxes -->
+    <div class="rectangle-container">
+      <div class="rectangle">
+          <div class="text-container">
+              <h2>j coal</h2>
+              <p>- so humble </p>
+              <p>- 2014 forest hills drive was an album</p>
+          </div>
+      </div>
+      <div class="rectangle">
+        <div class="text-container">
+            <h2>kendric lama</h2>
+            <p>- shorter than his wife</p>
+            <p>- may be a wife abuser</p>
+        </div>
+      </div>
+      <div class="rectangle">
+        <div class="text-container">
+            <h2>DRAKE</h2>
+            <p>- 12 inches</p>
+            <p>- i loeve cb tiwer</p>
+        </div>
+    </div>
+    </div>
+
+  <!-- Newsletter Section -->
+  <div class="newsletter-section">
+    <form>
+        <input type="email" placeholder="email" required>
+        <button id="submitButton" type="submit" onclick="submitForm(event)">↳</button>
+    </form>
+  </div>
+
+</body>
+
+</html>

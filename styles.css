@@ -1,0 +1,222 @@
+/* Define font face */
+@font-face {
+  font-family: chomsky;
+  src: url(chomsky.woff);
+}
+
+/* Body styles */
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+/* Header styles */
+.header {
+  background-color: black;
+  padding: 20px;
+  border-bottom: 3px solid white;
+  margin: 0 auto; /* Center the header horizontally */
+  text-align: center; /* Center the header content */
+  justify-content: flex-end;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 38px;
+  color: white;
+  letter-spacing: 4px; /* Adjust the value to increase or decrease the spacing */
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.header p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: white;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Toggle button styles */
+.toggle-button {
+  position: absolute;
+  top: 5.5%;
+  right: 25px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.toggle-image {
+  width: 40px;
+  height: 40px;
+}
+
+/* Social media icon styles */
+.instagram-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 30px;
+  top: 3.5%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.instagram-icon:hover {
+  transform: scale(1.2); /* Increase the size on hover */
+}
+
+.tiktok-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 70px;
+  top: 3.5%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.tiktok-icon:hover {
+  transform: scale(1.2); /* Increase the size on hover */
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Text overlay styles */
+.text-overlay {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  background-image: url('https://nomusica.com/wp-content/uploads/2024/05/Kendrick-Lamar-Not-Like-Us-Album-Cover-938x575.jpg');
+  background-size: cover;
+  background-position: center 20px;
+  background-repeat: no-repeat;
+}
+
+.rectangle-container {
+  position: absolute; /* Ensures rectangles are positioned relative to the image */
+  top: 50%; /* Positions the container halfway down the viewport */
+  left: 50%; /* Positions the container halfway from the left side */
+  width: 80%; /* Stretches the container across the entire width */
+  height: 50%; /* Stretches the container across the entire height */
+  display: flex; /* Arranges rectangles horizontally */
+  justify-content: space-around; /* Equally spaces rectangles within the container */
+  transform: translate(-50%, -50%); /* Positions the container in the center */
+}
+
+.rectangle {
+    background-color: rgba(0, 0, 0, 0.5); /* Sets a semi-transparent black background */
+    color: white; /* Sets text color to white */
+    padding: 10px; /* Adds some padding around the text */
+    text-align: center; /* Centers text within the rectangle */
+    font-size: 16px; /* Adjust font size as needed */
+    width: 25%; /* Adjust width as desired */
+    height: 100%; /* Adjust height as desired */
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s cubic-bezier(0.5, 0, 0.5, 1), transform 1.5s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.rectangle h2 { /* Target titles within rectangles */
+  font-size: 40px; /* Adjust title font size */
+  margin-bottom: 10px; /* Add some space below the title */
+}
+
+.rectangle p { /* Target points within rectangles */
+  font-size: 20px; /* Adjust point font size */
+  margin-bottom: 10px; /* Add some space between points */
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Newsletter section styles */
+.newsletter-section {
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: -11px; /* Adjust the margin-left value as needed */
+  width: calc(100% - 20px); /* Subtract the double padding from the width */
+}
+
+.newsletter-section form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  align-items: center; /* Center the form vertically */
+  flex-wrap: wrap; /* Allow multiple form elements to wrap */
+}
+
+.newsletter-section input[type="email"] {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid white;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  border-right: none; /* Remove the right border */
+  outline: none;
+}
+
+.newsletter-section button[type="submit"] {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  font-size: 14px;
+  cursor: pointer;
+  border-left: none; /* Remove the right border */
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* loading */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.loading-text {
+  color: white;
+  font-size: 100px;
+  padding: 10px 20px;
+  background-color: black;
+  border-radius: 4px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out, color 1s ease-in-out, font-size 1s ease-in-out;
+  letter-spacing: 5px;
+}
+
+/* Hide the loading overlay and text once the page has loaded */
+body.loaded .loading-text {
+  opacity: 0;
+  color: black;
+  font-size: 35px;
+}
+
+body.loaded .loading-text {
+  opacity: 0;
+  color: black;
+  font-size: 35px;
+}
